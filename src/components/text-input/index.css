@@ -1,0 +1,5 @@
+.text-input input {
+  display: block;
+  border-radius: 0.2rem;
+  border-color: lightgrey;
+}
