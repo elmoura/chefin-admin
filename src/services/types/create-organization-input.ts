@@ -1,4 +1,4 @@
-type CreateLocationInput = {
+export type CreateLocationInput = {
   locationName: string;
   city: string;
   neighborhood: string;

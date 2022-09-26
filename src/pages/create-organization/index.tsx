@@ -30,18 +30,7 @@ export const CreateOrganization: FunctionComponent = () => {
       password: "",
       phoneNumber: "",
     },
-    locations: [
-      {
-        state: "",
-        city: "",
-        neighborhood: "",
-        postalCode: "",
-        street: "",
-        number: "",
-        complement: "",
-        locationName: "",
-      },
-    ],
+    locations: [],
   };
 
   const formik = useFormik({
@@ -64,48 +53,26 @@ export const CreateOrganization: FunctionComponent = () => {
           <fieldset className="organization-data">
             <legend>
               Nome da empresa
-              <TextInput value={} onChange={formik.handleChange} />
+              <TextInput
+                id="name"
+                name="name"
+                value={formik.values.name}
+                onChange={formik.handleChange}
+              />
             </legend>
 
             <legend>
               Especialidade do restaurante
-              <TextInput />
+              <TextInput
+                id="businessSegment"
+                name="businessSegment"
+                value={formik.values.businessSegment}
+                onChange={formik.handleChange}
+              />
             </legend>
           </fieldset>
 
           <h2>Dados das unidades:</h2>
-
-          <fieldset className="organization-locations-data">
-            <legend>
-              CEP
-              <TextInput />
-            </legend>
-
-            <legend>
-              Cidade
-              <TextInput />
-            </legend>
-
-            <legend>
-              Estado
-              <TextInput />
-            </legend>
-
-            <legend>
-              Endereço
-              <TextInput />
-            </legend>
-
-            <legend>
-              Numero
-              <TextInput />
-            </legend>
-
-            <legend>
-              Complemento
-              <TextInput />
-            </legend>
-          </fieldset>
 
           <Button text="Enviar" />
         </form>
