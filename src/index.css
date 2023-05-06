@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  width: 100vw;
+  height: 100vh;
+
+  --gray-800: #1f2937;
+
+  --orange-500: #f97316;
+  --orange-400: #fb923c;
+}
