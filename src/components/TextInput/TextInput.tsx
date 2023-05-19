@@ -21,7 +21,7 @@ export const TextInput: FunctionComponent<ITextInputProps> = ({
       <input
         type="text"
         placeholder={placeholder}
-        className="px-3 py-2 outline-none border shadow-inner border-gray-600 focus:border-2 hover:border-orange-400 focus:border-orange-400 transition-all rounded"
+        className="px-3 py-2 outline-none border shadow-inner border-gray-400 focus:border-2 hover:border-orange-400 focus:border-orange-400 transition-all rounded"
         {...rest}
       />
     </div>

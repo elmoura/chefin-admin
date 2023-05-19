@@ -17,7 +17,9 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@models/*": ["src/models/*"],
+      "@api/*": ["src/api/*"]
     }
   },
   "include": ["src", "tsconfig.json"],

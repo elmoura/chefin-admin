@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import { QueryClientProvider } from "react-query";
 import { CreateOrganization } from "./pages/create-organization";
+import "./index.css";
+import { queryClient } from "@api/api";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <CreateOrganization />
+    <QueryClientProvider client={queryClient}>
+      <CreateOrganization />
+    </QueryClientProvider>
   </React.StrictMode>
 );

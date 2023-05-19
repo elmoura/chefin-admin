@@ -1,26 +1,25 @@
 import { FunctionComponent, useMemo, useState } from "react";
 import { TextInput } from "@components/TextInput";
 import { Button } from "@components/Button";
+import { Location } from "@models/organization";
 
 export const CreateLocation: FunctionComponent = () => {
-  // Botao de + => renderiza uma nova seção de Location
-  // A seção de Location pode ser minimizável, exibindo somente o nome da unidade
-
-  const [locations, setLocations] = useState([]);
-
   return (
     <div className="py-3">
-      <h2 className="font-bold text-lg">Dados das unidades</h2>
+      <h2 className="font-bold text-lg pb-5">Dados das unidades</h2>
 
+      {/* Map location */}
       <Location />
 
-      <Button>+ Adicionar unidade</Button>
+      <div className="pt-4">
+        <Button>+ Adicionar unidade</Button>
+      </div>
     </div>
   );
 };
 
 const Location: FunctionComponent = () => {
-  const [locationName, setLocationName] = useState();
+  const {} = useState<Location>();
 
   // name: ""
   // state: ""
@@ -30,8 +29,12 @@ const Location: FunctionComponent = () => {
   // complement: ""
   // postalCode: ""
 
+  // defaultTitle || name
+
   return (
-    <section className="py-4">
+    <details className="py-4 px-6 border border-gray-400 rounded">
+      <summary className="text-lg font-bold">Oie</summary>
+
       <fieldset className="grid md:grid-cols-2 gap-x-6 gap-y-1">
         <TextInput label="Nome da unidade" />
         <TextInput label="CEP" />
@@ -41,6 +44,6 @@ const Location: FunctionComponent = () => {
         <TextInput label="Número" />
         <TextInput label="Complemento" />
       </fieldset>
-    </section>
+    </details>
   );
 };
